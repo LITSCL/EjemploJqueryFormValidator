@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="vendor/jquery-3.5.0/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.form-validator-2.3.70/jquery.form-validator.min.js"></script>
+    <title>Document</title>
+    <style>
+        .form-error {
+            font-size: 17px;
+            font-weight: bold;
+            color: red;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p>
+            <input type="text" placeholder="02/05/2021" data-validation="date" data-validation-format="dd/mm/yyyy">
+        </p>
+        <p>
+            <input type="text" placeholder="daniel@local.com" data-validation="email">
+        </p>
+        <p>
+            <input type="text" placeholder="https://pagina.org" data-validation="url">
+        </p>
+        <p>
+            <input type="text" placeholder="125" data-validation="number">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>     
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $.validate({ 
+                lang: "es" 
+            });
+        });
+    </script>
+</body>
+</html>
